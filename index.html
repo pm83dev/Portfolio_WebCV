@@ -1,43 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <link rel="icon">
-  <meta charset="UTF-8">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="-1">
-  <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
-  <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/master.css">
-  <title>Paolo - Software Developer</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paolo - Software Developer</title>
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
+    <div class="content-wrapper">
 
-<div class="card custom-card">
-        <img class="card-img-top profile_pic" src="./images/profile_pic.png" alt="ProPic">
-    <div class="card-body">
-        <h1 class="card-title">Paolo Miccoli</h1>
-        <h2 class="card-text">Software Developer</h2>
-        <h5>Hello everyone, nice to meet you!</h5>
-        <h5>My name is Paolo, and I have a strong passion for programming and the world of development. Starting my career as a PLC developer, I've always strived to expand my coding skills. Currently, I'm involved in various exciting projects focused on the OPC UA protocol, enabling PLC variables to be accessed via the web using MQTT. These applications are developed using .NET, C#, Javascript and React. This allows monitoring of machines from anywhere!</h5>
-        <h5>I'm constantly curious about emerging technologies and new features. On this page, you can explore the ongoing projects that I hope you'll find interesting.</h5>
-        <h5>Below, you'll find direct links to my LinkedIn profile and GitHub:</h5>
-        <div><a href="https://www.linkedin.com/in/paolo-m-5a665884/" class="btn btn-info btn-linkedin">See my Linkedin Profile!</a></div>
+        <div class="custom-card">
+            <img class="card-img-top profile_pic" src="./images/profile_pic.png" alt="ProPic">
+            <div class="card-body">
+                <h1 class="card-title">Paolo Miccoli</h1>
+                <h2 class="card-text">Software Developer</h2>
+                <h5>Hello everyone, nice to meet you!</h5>
+                <h5>My name is Paolo, and I have a strong passion for programming and the world of development. Starting
+                    my career as a PLC developer, I've always strived to expand my coding skills. Currently, I'm involved
+                    in various exciting projects focused on the OPC UA protocol, enabling PLC variables to be accessed via
+                    the web using MQTT. These applications are developed using .NET, C#, Javascript and React. This allows
+                    monitoring of machines from anywhere!</h5>
+                <h5>I'm constantly curious about emerging technologies and new features. On this page, you can explore the
+                    ongoing projects that I hope you'll find interesting.</h5>
+                <h5>Below, you'll find direct links to my LinkedIn profile and GitHub:</h5>
+                <div><a href="https://www.linkedin.com/in/paolo-m-5a665884/" class="btn btn-info btn-linkedin"
+                        target="_blank">See my Linkedin Profile!</a></div>
+                <div><a href="https://github.com/pm83dev/" class="btn btn-info btn-github" target="_blank">Chekout my
+                        Github!</a></div>
+            </div>
+        </div>
 
-        <div><a href="https://github.com/pm83dev/" class="btn btn-info btn-github">Chekout my Github!</a></div>
-    
+        <div class="container-wrapper">
+            <div class="container container-1">
+                <h2>Experience</h2>
+                <p>I have extensive experience in developing automation applications and overseeing worldwide commissioning for industrial machinery. Over the years, I have participated in numerous courses and webinars aimed at enhancing my proficiency in advanced software development. Some of the certifications I have acquired include:</p>
+                <ul>Microsoft:
+                    <li>Foundational C# with Microsoft</li>
+                </ul>
+                <ul>Programming Hub
+                    <li>C# Development Course</li>
+                    <li>SQL and Database Course</li>
+                    <li>Advanced JavaScript Development Course</li>
+                    <li>Advanced Python Development Course</li>
+                    <li>Electron.js Development Course</li>
+                    <li>Node.js Development Course</li>
+                    <li>React.js Development Course</li>
+                    <li>Git Certification Course</li>
+                    <li>Bootstrap Framework Development Course</li>
+                    <li>Typescript Development Course</li>
+                </ul>
+            </div>
+
+            <div class="container container-2">
+                <h2>My Projects</h2>
+                <p>Here you can find links to my projects or additional information.</p>
+                <ul>
+                    <li><a href="https://web-react-app-eight.vercel.app/" target="_blank">Example of Web Supervisor For Extruder Machine</a></li>
+                    <a href="#" onclick="showImage('/images/supervisor_screen_1.png')">OPCUA Supervisor For Extruder Machine</a>
+            <i class="fas fa-exclamation-triangle"></i>
+                    <li><a href="#">WIP Project 3</a> <i class="fas fa-exclamation-triangle"></i> </li>
+                </ul>
+            </div>
+        </div>
+
     </div>
-    
-</div>
 
-  <footer>
-    <p class="copyright-text">© Copyright 2024 PM</p>
-  </footer>
+    <footer>
+        <p class="copyright-text">© Copyright 2024 PM</p>
+    </footer>
 
-  <!-- Our codes -->
-  <script src="js/main.js"></script>
+    <!-- Our codes -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
