@@ -1,9 +1,21 @@
 function showImage(imageUrl) {
-    var imageContainer = document.getElementById('image-container');
-    var img = document.createElement('img');
-    img.src = imageUrl;
-    img.alt = 'Immagine del progetto'; // Sostituisci con una descrizione appropriata
-    img.style.maxWidth = '100%'; // Esempio: larghezza massima al 100% del contenitore
-    imageContainer.innerHTML = ''; // Pulisce il contenitore prima di aggiungere l'immagine
-    imageContainer.appendChild(img);
+    var modal = document.getElementById('imageModal');
+    var modalImg = document.getElementById('modalImage');
+    modalImg.src = imageUrl;
+    modal.style.display = "flex";
+}
+
+document.getElementById('imageModal').onclick = function() {
+    this.style.display = "none";
+}
+
+function showModal(message) {
+    var modal = document.getElementById('msgModal');
+    var modalMessage = document.getElementById('modalMessage');
+    modalMessage.textContent = message;
+    modal.style.display = "flex";
+}
+
+document.getElementById('msgModal').onclick = function() {
+    this.style.display = "none";
 }
