@@ -5,6 +5,31 @@
     font-style: normal;
 }
 
+.header-title {
+    display: flex;
+    flex-direction: column; /* Imposta la direzione dei figli come colonna */
+    align-items: center; /* Centra gli elementi all'interno dell'header verticalmente */
+    text-align: center; /* Centra il testo all'interno dell'header */
+    padding: 20px; /* Aggiunge spazio interno all'header */
+    background-color: #1b1f23; /* Esempio di colore di sfondo per l'header */
+    border-radius: 8px; /* Arrotonda i bordi dell'header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aggiunge ombra all'header */
+  }
+  
+  .header-title h1 {
+    margin: 0; /* Rimuove il margine predefinito del titolo h1 */
+  }
+  
+  .header-title nav {
+    margin-top: 10px; /* Aggiunge spazio sopra la navbar */
+  }
+  
+  .header-title nav a {
+    margin: 0 10px; /* Aggiunge spazio tra i link nella navbar */
+  }
+
+
+
 body {
     background-color: #282b30;
     color: #88c1ea;
