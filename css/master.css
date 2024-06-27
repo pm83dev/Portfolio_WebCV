@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Korataki';
+    src: url('./KORATAKI\ REGULAR.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-color: #282b30;
     color: #88c1ea;
@@ -12,10 +19,14 @@ body {
 .content-wrapper {
     display: flex;
     max-width: 1200px; /* Larghezza massima del contenitore principale */
-    /*margin: auto; /* Centra il contenuto orizzontalmente */
+    margin: auto; /* Centra il contenuto orizzontalmente */
     padding: 20px;
 }
 
+.custom-card h2, h1 {
+    font-family: 'korataki','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
 .custom-card {
     background-color: #1b1f23;
     color: #88c1ea;
@@ -51,7 +62,13 @@ body {
     gap: 20px;
 }
 
+.container h2{
+    font-family: 'korataki','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
 .container {
+    
     background-color: #1b1f23;
     border-radius: 5px;
     display: flexbox;
