@@ -32,7 +32,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">
-                <img src="./images/LogoPM.png" alt="Logo" height="32"> PM Software & Automation
+                <img src="./images/LogoPM.png" alt="Logo" height="60"> PM Software & Automation
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -72,19 +72,27 @@ Attraverso lo sviluppo di applicazioni web, API di integrazione e interfacce use
     <!-- Services -->
     <section id="services" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Services</h2>
+            <h2 class="text-center mb-4">Main Services</h2>
             <div class="row g-4 text-center justify-content-center">
-                <div class="col-md-3 service-card me-2 ms-2">
-                    <i class="fas fa-code fa-3x text-primary mb-2"></i>
+                <div class="col-md-3 service-card me-5 ms-5">
+                    <i class="fas fa-code fa-3x text-primary mb-3 mt-3"></i>
                     <h5>Software Development</h5>
                 </div>
-                <div class="col-md-3 service-card me-2">
-                    <i class="fas fa-globe fa-3x text-success mb-2"></i>
+                <div class="col-md-3 service-card me-5 ms-5">
+                    <i class="fas fa-globe fa-3x text-success mb-3 mt-3"></i>
                     <h5>Web Development</h5>
                 </div>
-                <div class="col-md-3 service-card me-2">
-                    <i class="fas fa-robot fa-3x text-info mb-2"></i>
+                <div class="col-md-3 service-card me-5 ms-5">
+                    <i class="fas fa-robot fa-3x text-info mb-3 mt-3"></i>
                     <h5>Automation & IoT</h5>
+                </div>
+                <div class="col-md-3 service-card me-5 ms-5">
+                    <i class="fas fa-cogs fa-3x text-warning mb-3 mt-3"></i>
+                    <h5>System Integration</h5>
+                </div>
+                <div class="col-md-3 service-card me-5 ms-5">
+                    <i class="fas fa-database fa-3x text-danger mb-3 mt-3"></i>
+                    <h5>Data Analytics</h5>
                 </div>
             </div>
         </div>
@@ -93,7 +101,7 @@ Attraverso lo sviluppo di applicazioni web, API di integrazione e interfacce use
     <!-- Projects -->
     <section id="projects" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Projects & Demos</h2>
+            <h2 class="text-center mb-4">Projects & Demos <br> (Soon i'll post some news, stay tuned! <i class="fas fa-smile-wink"></i>)</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100 project-card">
@@ -134,12 +142,16 @@ Attraverso lo sviluppo di applicazioni web, API di integrazione e interfacce use
                 <div class="col-md-6">
                     <form action="https://formspree.io/f/mjkonddg" method="POST" class="card p-4 shadow-sm">
                         <div class="mb-3">
+                            <label for="name" class="form-label">Your name:</label>
+                            <input type="text" class="form-control" name="name" required>
+                        </div>
+                        <div class="mb-3">
                             <label for="email" class="form-label">Your email:</label>
                             <input type="email" class="form-control" name="email" required>
                         </div>
                         <div class="mb-3">
                             <label for="phone" class="form-label">Phone:</label>
-                            <input type="tel" class="form-control" name="phone" pattern="[0-9 +()-]{7,}" placeholder="e.g. +39 333 1234567">
+                            <input type="tel" class="form-control" name="phone" pattern="[0-9 +()-]{7,}" placeholder="+39 333 1234567">
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Your message:</label>
@@ -159,7 +171,7 @@ Attraverso lo sviluppo di applicazioni web, API di integrazione e interfacce use
     <!-- Footer -->
     <footer class="bg-dark text-light py-4 mt-5 text-center">
         <address>
-            <strong>PM Software & Automation</strong><br>
+            <strong>PM Software & Automation di Miccoli Paolo</strong><br>
             Marano Ticino - Novara<br>
             <a href="mailto:paolo@pm-softwareautomation.com" class="text-light">paolo@pm-softwareautomation.com</a>
         </address>
