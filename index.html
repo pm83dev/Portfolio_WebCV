@@ -1,238 +1,1664 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Paolo Miccoli - Software & Automation Developer, specializzato in C#, .NET, IoT e soluzioni web per l'industria.">
-    <meta name="keywords" content="Paolo Miccoli, software developer, automation, IoT, C#, .NET, web development, industrial solutions">
-    <meta name="author" content="Paolo Miccoli">
+<!doctype html>
+<html lang="it" data-lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Paolo Miccoli — Industrial Software Developer. PLC Siemens, Codesys, B&R, .NET, Angular. Dal sensore al cloud."
+    />
+    <meta
+      name="keywords"
+      content="Paolo Miccoli, industrial software developer, PLC Siemens, Codesys, B&R, OPC-UA, SCADA, .NET, Angular, automazione industriale, IoT industriale"
+    />
+    <meta name="author" content="Paolo Miccoli" />
+    <meta
+      property="og:title"
+      content="Paolo Miccoli — Industrial Software Developer"
+    />
+    <meta
+      property="og:description"
+      content="Dal sensore al cloud. PLC, SCADA, OPC-UA, .NET & Angular per PMI industriali."
+    />
+    <meta property="og:image" content="./images/LogoPM.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pm-softwareautomation.com" />
+    <title>Paolo Miccoli — Industrial Software Developer</title>
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="PM Software & Automation">
-    <meta property="og:description" content="Software, automazione, IoT e sviluppo web. Soluzioni per l'industria moderna.">
-    <meta property="og:image" content="./images/LogoPM.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pm-softwareautomation.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800&family=Barlow:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PM Software & Automation">
-    <meta name="twitter:description" content="Soluzioni software e automazione industriale.">
-    <meta name="twitter:image" content="./images/LogoPM.png">
+    <style>
+      :root {
+        --bg: #0e0f11;
+        --bg2: #13151a;
+        --bg3: #1a1d24;
+        --panel: #1f222b;
+        --border: #2a2e3a;
+        --orange: #e8611a;
+        --orange2: #ff7c35;
+        --steel: #7a8fa6;
+        --steellight: #afc4d8;
+        --text: #dce6f0;
+        --muted: #7a8fa6;
+        --white: #f0f4f8;
+        --font-head: "Barlow Condensed", sans-serif;
+        --font-body: "Barlow", sans-serif;
+        --font-mono: "JetBrains Mono", monospace;
+      }
 
-    <title>PM - Software & Automation</title>
-    
-    <!-- Bootstrap e FontAwesome -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/master.css">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
-                <img src="./images/LogoPM.png" alt="Logo" height="60"> PM Software & Automation
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://linkedin.com/in/paolo-m-5a665884/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/pm83dev/" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a></li>
-                </ul>
-            </div>
-        </div>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      /* ── NOISE OVERLAY ── */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.4;
+      }
+
+      /* ── NAVBAR ── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2.5rem;
+        height: 68px;
+        background: rgba(14, 15, 17, 0.92);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+      }
+      .nav-brand img {
+        height: 38px;
+      }
+      .nav-brand span {
+        font-family: var(--font-head);
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: 0.05em;
+        color: var(--white);
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        list-style: none;
+      }
+      .nav-links a {
+        color: var(--muted);
+        text-decoration: none;
+        font-family: var(--font-head);
+        font-weight: 600;
+        font-size: 0.85rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 0.4rem 0.75rem;
+        border-radius: 4px;
+        transition:
+          color 0.2s,
+          background 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--orange);
+        background: rgba(232, 97, 26, 0.08);
+      }
+      .nav-links .icon-link {
+        font-size: 1rem;
+      }
+      .nav-links .lang-btn {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--orange);
+        border: 1px solid var(--orange);
+        border-radius: 4px;
+        padding: 0.3rem 0.6rem;
+        cursor: pointer;
+        background: none;
+        letter-spacing: 0.05em;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .nav-links .lang-btn:hover {
+        background: var(--orange);
+        color: #fff;
+      }
+
+      /* hamburger */
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+        padding: 4px;
+      }
+      .nav-toggle span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--text);
+        border-radius: 2px;
+        transition:
+          transform 0.3s,
+          opacity 0.3s;
+      }
+
+      /* ── HERO ── */
+      #hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 100px 0 60px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-grid-bg {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(232, 97, 26, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(232, 97, 26, 0.04) 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: radial-gradient(
+          ellipse 80% 80% at 50% 50%,
+          black 30%,
+          transparent 100%
+        );
+      }
+      .hero-glow {
+        position: absolute;
+        top: 20%;
+        right: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(232, 97, 26, 0.12) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-eyebrow {
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        color: var(--orange);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .hero-eyebrow::before {
+        content: "";
+        display: inline-block;
+        width: 32px;
+        height: 2px;
+        background: var(--orange);
+      }
+      h1.hero-name {
+        font-family: var(--font-head);
+        font-weight: 800;
+        font-size: clamp(3.5rem, 8vw, 7rem);
+        line-height: 0.95;
+        letter-spacing: -0.01em;
+        color: var(--white);
+        margin-bottom: 0.5rem;
+      }
+      h1.hero-name span {
+        color: var(--orange);
+      }
+      .hero-title {
+        font-family: var(--font-head);
+        font-weight: 300;
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        color: var(--steellight);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+      }
+      .hero-desc {
+        font-size: 1.05rem;
+        color: var(--muted);
+        max-width: 580px;
+        margin-bottom: 2.5rem;
+        line-height: 1.8;
+      }
+      .hero-desc strong {
+        color: var(--steellight);
+        font-weight: 500;
+      }
+      .hero-cta {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .btn-primary-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--orange);
+        color: #fff;
+        font-family: var(--font-head);
+        font-weight: 700;
+        font-size: 0.95rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.85rem 2rem;
+        border-radius: 4px;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.2s;
+      }
+      .btn-primary-cta:hover {
+        background: var(--orange2);
+        transform: translateY(-2px);
+      }
+      .btn-secondary-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: transparent;
+        color: var(--steellight);
+        font-family: var(--font-head);
+        font-weight: 600;
+        font-size: 0.95rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.85rem 2rem;
+        border-radius: 4px;
+        text-decoration: none;
+        border: 1px solid var(--border);
+        transition:
+          border-color 0.2s,
+          color 0.2s,
+          transform 0.2s;
+      }
+      .btn-secondary-cta:hover {
+        border-color: var(--orange);
+        color: var(--orange);
+        transform: translateY(-2px);
+      }
+
+      .hero-stack {
+        margin-top: 3.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+      .hero-stack-label {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--muted);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+      .stack-tag {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--steellight);
+        background: var(--panel);
+        border: 1px solid var(--border);
+        padding: 0.3rem 0.65rem;
+        border-radius: 3px;
+        letter-spacing: 0.05em;
+      }
+
+      /* ── SECTION COMMON ── */
+      section {
+        padding: 100px 0;
+      }
+      .section-label {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--orange);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .section-label::before {
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 2px;
+        background: var(--orange);
+      }
+      h2.section-title {
+        font-family: var(--font-head);
+        font-weight: 700;
+        font-size: clamp(2rem, 4vw, 3rem);
+        color: var(--white);
+        line-height: 1.1;
+        margin-bottom: 1rem;
+      }
+      .section-subtitle {
+        font-size: 1rem;
+        color: var(--muted);
+        max-width: 560px;
+        line-height: 1.8;
+      }
+
+      /* ── PROBLEMS ── */
+      #problems {
+        background: var(--bg2);
+      }
+      .problems-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 3rem;
+      }
+      .problem-card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-left: 3px solid var(--orange);
+        padding: 1.75rem;
+        border-radius: 6px;
+        transition:
+          border-color 0.2s,
+          transform 0.2s;
+      }
+      .problem-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--orange);
+      }
+      .problem-card i {
+        font-size: 1.6rem;
+        color: var(--orange);
+        margin-bottom: 1rem;
+        display: block;
+      }
+      .problem-card h4 {
+        font-family: var(--font-head);
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: var(--white);
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.02em;
+      }
+      .problem-card p {
+        font-size: 0.9rem;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      /* ── SKILLS ── */
+      #skills {
+        background: var(--bg);
+      }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      .skills-block {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 2rem;
+      }
+      .skills-block-title {
+        font-family: var(--font-head);
+        font-weight: 700;
+        font-size: 1rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--orange);
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .skill-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(42, 46, 58, 0.5);
+        font-size: 0.9rem;
+        color: var(--steellight);
+      }
+      .skill-item:last-child {
+        border-bottom: none;
+      }
+      .skill-item::before {
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        background: var(--orange);
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      /* ── PROJECTS ── */
+      #projects {
+        background: var(--bg2);
+      }
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 3rem;
+      }
+      .project-card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        overflow: hidden;
+        transition:
+          transform 0.2s,
+          border-color 0.2s;
+        display: flex;
+        flex-direction: column;
+      }
+      .project-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--orange);
+      }
+      .project-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        filter: grayscale(20%) brightness(0.85);
+        transition: filter 0.3s;
+      }
+      .project-card:hover img {
+        filter: grayscale(0%) brightness(1);
+      }
+      .project-body {
+        padding: 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .project-tag {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        color: var(--orange);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+      .project-body h4 {
+        font-family: var(--font-head);
+        font-weight: 700;
+        font-size: 1.15rem;
+        color: var(--white);
+        margin-bottom: 0.5rem;
+      }
+      .project-body p {
+        font-size: 0.88rem;
+        color: var(--muted);
+        line-height: 1.7;
+        flex: 1;
+      }
+      .project-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 1rem;
+      }
+      .project-stack span {
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        color: var(--steellight);
+        background: var(--bg3);
+        border: 1px solid var(--border);
+        padding: 0.2rem 0.5rem;
+        border-radius: 3px;
+      }
+
+      /* ── CASE STUDY HIGHLIGHT ── */
+      .case-study-feature {
+        margin-top: 3rem;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-top: 3px solid var(--orange);
+        border-radius: 6px;
+        padding: 2.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        align-items: start;
+      }
+      .case-badge {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        color: var(--orange);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .case-badge::before {
+        content: "●";
+        font-size: 0.5rem;
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.3;
+        }
+      }
+      .case-study-feature h3 {
+        font-family: var(--font-head);
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: var(--white);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+      .case-study-feature p {
+        font-size: 0.9rem;
+        color: var(--muted);
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+      .case-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .case-detail-row {
+        display: flex;
+        gap: 1rem;
+        padding: 0.75rem;
+        background: var(--bg3);
+        border-radius: 4px;
+        border-left: 2px solid var(--border);
+      }
+      .case-detail-row.highlight {
+        border-left-color: var(--orange);
+      }
+      .case-detail-label {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        color: var(--orange);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        min-width: 80px;
+        padding-top: 2px;
+      }
+      .case-detail-value {
+        font-size: 0.88rem;
+        color: var(--steellight);
+        line-height: 1.6;
+      }
+
+      /* ── ABOUT ── */
+      #about {
+        background: var(--bg);
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.6fr;
+        gap: 4rem;
+        align-items: center;
+        margin-top: 3rem;
+      }
+      .about-img-wrap {
+        position: relative;
+      }
+      .about-img-wrap img {
+        width: 100%;
+        border-radius: 6px;
+        filter: grayscale(30%);
+        border: 1px solid var(--border);
+      }
+      .about-img-wrap::after {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        right: -12px;
+        width: 100%;
+        height: 100%;
+        border: 2px solid var(--orange);
+        border-radius: 6px;
+        z-index: -1;
+        opacity: 0.4;
+      }
+      .about-text p {
+        font-size: 0.98rem;
+        color: var(--muted);
+        line-height: 1.9;
+        margin-bottom: 1.25rem;
+      }
+      .about-text p strong {
+        color: var(--steellight);
+        font-weight: 500;
+      }
+      .about-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .stat-box {
+        text-align: center;
+        padding: 1.25rem;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+      }
+      .stat-num {
+        font-family: var(--font-head);
+        font-weight: 800;
+        font-size: 2.2rem;
+        color: var(--orange);
+        line-height: 1;
+        display: block;
+      }
+      .stat-label {
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-top: 0.4rem;
+      }
+
+      /* ── CONTACT ── */
+      #contact {
+        background: var(--bg2);
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        gap: 4rem;
+        margin-top: 3rem;
+        align-items: start;
+      }
+      .contact-info h3 {
+        font-family: var(--font-head);
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--white);
+        margin-bottom: 1rem;
+      }
+      .contact-info p {
+        font-size: 0.92rem;
+        color: var(--muted);
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+      }
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 0.9rem;
+        color: var(--steellight);
+        text-decoration: none;
+      }
+      .contact-item i {
+        color: var(--orange);
+        width: 18px;
+        text-align: center;
+      }
+      .contact-item:hover {
+        color: var(--orange);
+      }
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+      .form-label {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+      .form-control {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 0.75rem 1rem;
+        color: var(--text);
+        font-family: var(--font-body);
+        font-size: 0.92rem;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .form-control:focus {
+        border-color: var(--orange);
+      }
+      .form-control::placeholder {
+        color: var(--muted);
+        opacity: 0.5;
+      }
+      textarea.form-control {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        background: var(--bg);
+        border-top: 1px solid var(--border);
+        padding: 2.5rem 0;
+        text-align: center;
+      }
+      .footer-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .footer-logo {
+        font-family: var(--font-head);
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+      }
+      .footer-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+      .footer-links a {
+        color: var(--muted);
+        font-size: 1.1rem;
+        transition: color 0.2s;
+        text-decoration: none;
+      }
+      .footer-links a:hover {
+        color: var(--orange);
+      }
+      .footer-copy {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--muted);
+        opacity: 0.6;
+      }
+
+      /* ── ALERT ── */
+      .alert-success {
+        background: rgba(232, 97, 26, 0.1);
+        border: 1px solid var(--orange);
+        border-radius: 4px;
+        padding: 0.75rem 1rem;
+        font-size: 0.88rem;
+        color: var(--orange);
+        display: none;
+        margin-top: 0.5rem;
+      }
+
+      /* ── ANIMATIONS ── */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 900px) {
+        .skills-grid,
+        .about-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .case-study-feature {
+          grid-template-columns: 1fr;
+        }
+        .about-img-wrap {
+          max-width: 320px;
+          margin: 0 auto;
+        }
+      }
+      @media (max-width: 700px) {
+        nav {
+          padding: 0 1.25rem;
+        }
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 68px;
+          left: 0;
+          right: 0;
+          background: var(--bg2);
+          border-bottom: 1px solid var(--border);
+          padding: 1rem;
+          gap: 0.25rem;
+        }
+        .nav-links.open {
+          display: flex;
+        }
+        .nav-toggle {
+          display: flex;
+        }
+        .about-stats {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 480px) {
+        .about-stats {
+          grid-template-columns: 1fr;
+        }
+        .hero-cta {
+          flex-direction: column;
+        }
+      }
+
+      /* ── LANG VISIBILITY ── */
+      [data-it],
+      [data-en] {
+      }
+      html[data-lang="it"] [data-en] {
+        display: none !important;
+      }
+      html[data-lang="en"] [data-it] {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <a class="nav-brand" href="#">
+        <img src="./images/LogoPM.png" alt="PM Logo" />
+        <span>PM Software & Automation</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li>
+          <a href="#problems" data-it>Soluzioni</a
+          ><a href="#problems" data-en>Solutions</a>
+        </li>
+        <li>
+          <a href="#skills" data-it>Competenze</a
+          ><a href="#skills" data-en>Skills</a>
+        </li>
+        <li>
+          <a href="#projects" data-it>Progetti</a
+          ><a href="#projects" data-en>Projects</a>
+        </li>
+        <li>
+          <a href="#about" data-it>Chi sono</a
+          ><a href="#about" data-en>About</a>
+        </li>
+        <li>
+          <a href="#contact" data-it>Contatti</a
+          ><a href="#contact" data-en>Contact</a>
+        </li>
+        <li>
+          <a
+            href="https://linkedin.com/in/paolo-m-5a665884/"
+            class="icon-link"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/pm83dev/"
+            class="icon-link"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+        <li><button class="lang-btn" id="langBtn">EN</button></li>
+      </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="about" class="hero-section text-center text-md-start">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-md-6">
-                    <h1 class="display-4 fw-bold text-light">Paolo Miccoli</h1>
-                    <h3 class="text-primary">Software & Automation Developer</h3>
-                    <p class="lead text-muted">Da oltre 15 anni opero nel campo dell’automazione industriale e dell’Internet of Things, unendo competenze di sviluppo software e conoscenza dei processi produttivi per realizzare soluzioni digitali all’avanguardia.
-Ho realizzato sistemi di monitoraggio remoto, supervisione industriale in cloud e analisi delle performance per aziende di diversi settori, contribuendo alla loro transizione verso la fabbrica connessa e intelligente.
-Attraverso lo sviluppo di applicazioni web, API di integrazione e interfacce user-friendly, aiuto le imprese a sfruttare i dati in tempo reale per prendere decisioni più rapide e informate, aumentando produttività e competitività.</p>
-                    <a href="mailto:paolo@pm-softwareautomation.com" class="btn btn-gradient btn-lg mt-3"><i class="fas fa-envelope"></i> Contact Me</a>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="./images/Designer (2).png" alt="Paolo Miccoli" class="img-fluid rounded-circle shadow-lg profile-img">
-                </div>
-            </div>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-glow"></div>
+      <div class="container">
+        <p class="hero-eyebrow" data-it>Industrial Software Developer</p>
+        <p class="hero-eyebrow" data-en>Industrial Software Developer</p>
+        <h1 class="hero-name">Paolo <span>Miccoli</span></h1>
+        <p class="hero-title" data-it>Dal sensore al cloud</p>
+        <p class="hero-title" data-en>From field to cloud</p>
+        <p class="hero-desc" data-it>
+          Un'unica figura tecnica che copre
+          <strong>l'intera catena industriale</strong>: programmazione PLC,
+          SCADA, protocolli industriali e sviluppo software cloud. 15 anni tra
+          fabbrica e codice, in tutto il mondo.
+        </p>
+        <p class="hero-desc" data-en>
+          One technical figure covering the
+          <strong>entire industrial stack</strong>: PLC programming, SCADA,
+          industrial protocols, and cloud software development. 15 years between
+          factory floor and code, worldwide.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary-cta" data-it
+            ><i class="fas fa-calendar-alt"></i> Call gratuita 15 min</a
+          >
+          <a href="#contact" class="btn-primary-cta" data-en
+            ><i class="fas fa-calendar-alt"></i> Free 15-min call</a
+          >
+          <a href="#projects" class="btn-secondary-cta" data-it
+            ><i class="fas fa-arrow-down"></i> Vedi i progetti</a
+          >
+          <a href="#projects" class="btn-secondary-cta" data-en
+            ><i class="fas fa-arrow-down"></i> See projects</a
+          >
         </div>
+        <div class="hero-stack">
+          <span class="hero-stack-label" data-it>Stack</span>
+          <span class="hero-stack-label" data-en>Stack</span>
+          <span class="stack-tag">Siemens TIA Portal</span>
+          <span class="stack-tag">Codesys</span>
+          <span class="stack-tag">B&R Automation</span>
+          <span class="stack-tag">OPC-UA</span>
+          <span class="stack-tag">.NET / C#</span>
+          <span class="stack-tag">Angular</span>
+          <span class="stack-tag">MQTT</span>
+          <span class="stack-tag">SCADA</span>
+        </div>
+      </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Main Services</h2>
-            <div class="row g-4 text-center justify-content-center">
-                <div class="col-md-3 service-card me-5 ms-5">
-                    <i class="fas fa-code fa-3x text-primary mb-3 mt-3"></i>
-                    <h5>Software Development</h5>
-                </div>
-                <div class="col-md-3 service-card me-5 ms-5">
-                    <i class="fas fa-globe fa-3x text-success mb-3 mt-3"></i>
-                    <h5>Web Development</h5>
-                </div>
-                <div class="col-md-3 service-card me-5 ms-5">
-                    <i class="fas fa-robot fa-3x text-info mb-3 mt-3"></i>
-                    <h5>Automation & IoT</h5>
-                </div>
-                <div class="col-md-3 service-card me-5 ms-5">
-                    <i class="fas fa-cogs fa-3x text-warning mb-3 mt-3"></i>
-                    <h5>System Integration</h5>
-                </div>
-                <div class="col-md-3 service-card me-5 ms-5">
-                    <i class="fas fa-database fa-3x text-danger mb-3 mt-3"></i>
-                    <h5>Data Analytics</h5>
-                </div>
-            </div>
+    <!-- PROBLEMS -->
+    <section id="problems">
+      <div class="container fade-in">
+        <p class="section-label" data-it>Cosa risolvo</p>
+        <p class="section-label" data-en>What I solve</p>
+        <h2 class="section-title" data-it>
+          Il tuo impianto parla.<br />Riesci a sentirlo?
+        </h2>
+        <h2 class="section-title" data-en>
+          Your plant is talking.<br />Can you hear it?
+        </h2>
+        <p class="section-subtitle" data-it>
+          Le PMI industriali perdono ogni giorno dati preziosi perché i loro
+          sistemi non comunicano. Questi sono i problemi che risolvo.
+        </p>
+        <p class="section-subtitle" data-en>
+          Industrial SMEs lose valuable data every day because their systems
+          don't talk to each other. These are the problems I solve.
+        </p>
+        <div class="problems-grid">
+          <div class="problem-card">
+            <i class="fas fa-table"></i>
+            <h4 data-it>Produzione su carta e Excel</h4>
+            <h4 data-en>Production on paper & Excel</h4>
+            <p data-it>
+              Ordini trascritti a mano, dati letti fisicamente dagli operatori,
+              zero visibilità in tempo reale sullo stato dell'impianto.
+            </p>
+            <p data-en>
+              Manually transcribed orders, data read on-site, zero real-time
+              visibility on production status.
+            </p>
+          </div>
+          <div class="problem-card">
+            <i class="fas fa-unlink"></i>
+            <h4 data-it>PLC e gestionale che non comunicano</h4>
+            <h4 data-en>PLC and ERP that don't communicate</h4>
+            <p data-it>
+              Il reparto e l'ufficio lavorano su sistemi separati. Gli ordini
+              vengono reinseriti manualmente, con errori e ritardi.
+            </p>
+            <p data-en>
+              Shop floor and office run on separate systems. Orders are
+              re-entered manually, causing errors and delays.
+            </p>
+          </div>
+          <div class="problem-card">
+            <i class="fas fa-eye-slash"></i>
+            <h4 data-it>Nessun monitoraggio da remoto</h4>
+            <h4 data-en>No remote monitoring</h4>
+            <p data-it>
+              Per sapere come gira l'impianto bisogna essere fisicamente in
+              reparto. Allarmi e fermi non vengono rilevati in tempo.
+            </p>
+            <p data-en>
+              To know how the plant is running you need to be physically there.
+              Alarms and stoppages aren't detected in time.
+            </p>
+          </div>
+          <div class="problem-card">
+            <i class="fas fa-microchip"></i>
+            <h4 data-it>PLC datati senza OPC-UA</h4>
+            <h4 data-en>Legacy PLCs without OPC-UA</h4>
+            <p data-it>
+              Hai macchinari vecchi che non supportano protocolli moderni? Con
+              un router Weintek li collego comunque al cloud.
+            </p>
+            <p data-en>
+              Got older machines that don't support modern protocols? With a
+              Weintek router I can still connect them to the cloud.
+            </p>
+          </div>
+          <div class="problem-card">
+            <i class="fas fa-users-slash"></i>
+            <h4 data-it>Due fornitori che non si capiscono</h4>
+            <h4 data-en>Two vendors that don't understand each other</h4>
+            <p data-it>
+              Il programmatore PLC e il developer software parlano lingue
+              diverse. Io faccio entrambe le cose, nessuna coordinazione extra.
+            </p>
+            <p data-en>
+              The PLC programmer and the software developer speak different
+              languages. I do both — no extra coordination needed.
+            </p>
+          </div>
+          <div class="problem-card">
+            <i class="fas fa-euro-sign"></i>
+            <h4 data-it>SCADA enterprise troppo costoso</h4>
+            <h4 data-en>Enterprise SCADA too expensive</h4>
+            <p data-it>
+              Non devi spendere 50.000€ in licenze software per avere un
+              supervisore potente. Ho un sistema pronto e configurabile.
+            </p>
+            <p data-en>
+              You don't need to spend €50k in software licenses for a powerful
+              supervisor. I have a ready, configurable system.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Projects & Demos <br> (Soon i'll post some news, stay tuned! <i class="fas fa-smile-wink"></i>)</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 project-card">
-                        <img src="./images/IMG-20240524-WA0001.jpg" class="card-img-top" alt="Cloud web supervisor">
-                        <div class="card-body">
-                            <h5 class="card-title">Cloud Web Supervisor</h5>
-                            <p class="card-text">Supervisione industriale in cloud, monitoraggio e controllo remoto.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 project-card">
-                        <img src="./images/1730402325131.jpg" class="card-img-top" alt="Industry performance supervisor">
-                        <div class="card-body">
-                            <h5 class="card-title">Industry Performance Supervisor</h5>
-                            <p class="card-text">Analisi delle performance industriali e dashboard personalizzate.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 project-card">
-                        <img src="./images/IMG-20170523-WA0003.jpg" class="card-img-top" alt="HMI Scada">
-                        <div class="card-body">
-                            <h5 class="card-title">HMI Scada for Material Transporting</h5>
-                            <p class="card-text">Soluzioni HMI/SCADA per la movimentazione materiali.</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container fade-in">
+        <p class="section-label" data-it>Competenze</p>
+        <p class="section-label" data-en>Skills</p>
+        <h2 class="section-title" data-it>L'intera catena tecnologica</h2>
+        <h2 class="section-title" data-en>The full technology chain</h2>
+        <p class="section-subtitle" data-it>
+          Dal sensore fisico all'applicazione cloud. Una sola figura che conosce
+          ogni anello della catena.
+        </p>
+        <p class="section-subtitle" data-en>
+          From the physical sensor to the cloud application. One person who
+          knows every link in the chain.
+        </p>
+        <div class="skills-grid">
+          <div class="skills-block">
+            <div class="skills-block-title">
+              <i class="fas fa-industry"></i> &nbsp;Campo & Automazione
             </div>
+            <div class="skill-item">PLC Siemens — TIA Portal / Step 7</div>
+            <div class="skill-item">
+              PLC Codesys — HMI/PLC Pixsys - Inovance - Delta - ABB
+            </div>
+            <div class="skill-item">PLC B&R — Automation Studio</div>
+            <div class="skill-item">SCADA Siemens — WinCC</div>
+            <div class="skill-item">Configurazione inverter e azionamenti</div>
+            <div class="skill-item">Protocollo OPC-UA (lettura/scrittura)</div>
+            <div class="skill-item">Modbus TCP</div>
+            <div class="skill-item">MQTT</div>
+            <div class="skill-item">
+              Router Weintek (bridge PLC legacy → OPC-UA)
+            </div>
+          </div>
+          <div class="skills-block">
+            <div class="skills-block-title">
+              <i class="fas fa-cloud"></i> &nbsp;Software & Cloud
+            </div>
+            <div class="skill-item">.NET / C# — backend e API REST</div>
+            <div class="skill-item">Angular — frontend web</div>
+            <div class="skill-item">Supervisori web in cloud real-time</div>
+            <div class="skill-item">Dashboard di produzione e analytics</div>
+            <div class="skill-item">Integrazione gestionale / ERP</div>
+            <div class="skill-item">Web app embedded in SCADA</div>
+            <div class="skill-item">Applicazioni gestionali e desktop</div>
+            <div class="skill-item">Integrazioni sistemi legacy</div>
+            <div class="skill-item">Deployment cloud e VPS / Docker</div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-5 bg-dark">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form action="https://formspree.io/f/mjkonddg" method="POST" class="card p-4 shadow-sm">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Your name:</label>
-                            <input type="text" class="form-control" name="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Your email:</label>
-                            <input type="email" class="form-control" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone:</label>
-                            <input type="tel" class="form-control" name="phone" pattern="[0-9 +()-]{7,}" placeholder="+39 333 1234567">
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Your message:</label>
-                            <textarea class="form-control" name="message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-gradient w-100"><i class="fas fa-paper-plane"></i> Send</button>
-                        <div class="form-text text-light mt-2">I tuoi dati saranno inviati in modo sicuro. Riceverai risposta via email.</div>
-                        <div id="formSuccess" class="alert alert-success mt-3 d-none" role="alert">
-                          Grazie, il tuo messaggio è stato inviato con successo! Ti risponderò appena possibile.
-                        </div>
-                    </form>
-                </div>
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container fade-in">
+        <p class="section-label" data-it>Progetti</p>
+        <p class="section-label" data-en>Projects</p>
+        <h2 class="section-title" data-it>Casi reali, soluzioni concrete</h2>
+        <h2 class="section-title" data-en>Real cases, concrete solutions</h2>
+        <p class="section-subtitle" data-it>
+          Alcuni dei progetti realizzati negli ultimi anni.
+        </p>
+        <p class="section-subtitle" data-en>
+          A selection of projects delivered over the years.
+        </p>
+
+        <!-- FEATURED CASE STUDY -->
+        <div class="case-study-feature">
+          <div>
+            <div class="case-badge" data-it>Case study — In produzione</div>
+            <div class="case-badge" data-en>
+              Case study — Live in production
             </div>
+            <h3 data-it>Da Excel al controllo digitale della produzione</h3>
+            <h3 data-en>From Excel to digital production control</h3>
+            <p data-it>
+              Un'azienda di produzione saponi gestiva tutto manualmente: ordini
+              trascritti a mano, dati letti fisicamente in reparto, zero
+              visibilità da remoto. Ho sviluppato un sistema integrato che
+              connette il gestionale, il PLC e lo SCADA in un'unica interfaccia
+              web.
+            </p>
+            <p data-en>
+              A soap manufacturing company managed everything manually:
+              hand-transcribed orders, on-site data reading, zero remote
+              visibility. I built an integrated system connecting ERP, PLC and
+              SCADA in a single web interface.
+            </p>
+            <p data-it>
+              <strong style="color: var(--steellight)"
+                >Dettaglio tecnico chiave:</strong
+              >
+              l'applicazione web è integrata direttamente nello SCADA Siemens
+              come finestra embedded — l'operatore gestisce tutto da un'unica
+              schermata.
+            </p>
+            <p data-en>
+              <strong style="color: var(--steellight)"
+                >Key technical detail:</strong
+              >
+              the web app is embedded directly inside the Siemens SCADA as a web
+              window — operators manage everything from a single screen.
+            </p>
+          </div>
+          <div class="case-detail">
+            <div class="case-detail-row">
+              <span class="case-detail-label" data-it>Settore</span>
+              <span class="case-detail-label" data-en>Sector</span>
+              <span class="case-detail-value" data-it
+                >Manifatturiero — produzione saponi</span
+              >
+              <span class="case-detail-value" data-en
+                >Manufacturing — soap production</span
+              >
+            </div>
+            <div class="case-detail-row">
+              <span class="case-detail-label" data-it>Problema</span>
+              <span class="case-detail-label" data-en>Problem</span>
+              <span class="case-detail-value" data-it
+                >Gestione ordini manuale, nessun monitoraggio real-time</span
+              >
+              <span class="case-detail-value" data-en
+                >Manual order management, no real-time monitoring</span
+              >
+            </div>
+            <div class="case-detail-row highlight">
+              <span class="case-detail-label" data-it>Risultato</span>
+              <span class="case-detail-label" data-en>Result</span>
+              <span class="case-detail-value" data-it
+                >Zero trascrizioni manuali, visibilità real-time, ufficio e
+                reparto connessi</span
+              >
+              <span class="case-detail-value" data-en
+                >Zero manual transcription, real-time visibility, office and
+                shop floor connected</span
+              >
+            </div>
+            <div class="case-detail-row">
+              <span class="case-detail-label">Stack</span>
+              <span class="case-detail-label"></span>
+              <span class="case-detail-value"
+                >.NET / C#, Angular, OPC-UA, Siemens SCADA, REST API, ERP
+                integration</span
+              >
+              <span class="case-detail-value"></span>
+            </div>
+          </div>
         </div>
+
+        <div class="projects-grid" style="margin-top: 2rem">
+          <div class="project-card">
+            <img
+              src="./images/IMG-20240524-WA0001.jpg"
+              alt="Cloud Web Supervisor"
+            />
+            <div class="project-body">
+              <p class="project-tag" data-it>Supervisione industriale</p>
+              <p class="project-tag" data-en>Industrial supervision</p>
+              <h4>Cloud Web Supervisor</h4>
+              <p data-it>
+                Supervisore industriale in cloud con monitoraggio e controllo
+                remoto degli impianti. Accesso da qualsiasi dispositivo, allarmi
+                real-time.
+              </p>
+              <p data-en>
+                Cloud-based industrial supervisor with remote plant monitoring
+                and control. Access from any device, real-time alarms.
+              </p>
+              <div class="project-stack">
+                <span>.NET</span><span>Angular</span><span>OPC-UA</span
+                ><span>Cloud</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img
+              src="./images/1730402325131.jpg"
+              alt="Industry Performance Supervisor"
+            />
+            <div class="project-body">
+              <p class="project-tag" data-it>Analisi performance</p>
+              <p class="project-tag" data-en>Performance analytics</p>
+              <h4>Industry Performance Supervisor</h4>
+              <p data-it>
+                Dashboard personalizzate per l'analisi delle performance
+                industriali. KPI di produzione, OEE, trend e reportistica
+                automatica.
+              </p>
+              <p data-en>
+                Custom dashboards for industrial performance analysis.
+                Production KPIs, OEE, trends, and automated reporting.
+              </p>
+              <div class="project-stack">
+                <span>.NET</span><span>Angular</span><span>Analytics</span
+                ><span>Dashboard</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img src="./images/IMG-20170523-WA0003.jpg" alt="HMI SCADA" />
+            <div class="project-body">
+              <p class="project-tag" data-it>HMI / SCADA</p>
+              <p class="project-tag" data-en>HMI / SCADA</p>
+              <h4>HMI SCADA — Material Transporting</h4>
+              <p data-it>
+                Sistema HMI/SCADA per la supervisione e il controllo di un
+                impianto di movimentazione materiali. Sviluppato su Siemens TIA
+                Portal.
+              </p>
+              <p data-en>
+                HMI/SCADA system for supervision and control of a material
+                handling plant. Developed on Siemens TIA Portal.
+              </p>
+              <div class="project-stack">
+                <span>Siemens TIA Portal</span><span>WinCC</span
+                ><span>HMI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-4 mt-5 text-center">
-        <address>
-            <strong>PM Software & Automation di Miccoli Paolo</strong><br>
-            Marano Ticino - Novara<br>
-            <a href="mailto:paolo@pm-softwareautomation.com" class="text-light">paolo@pm-softwareautomation.com</a>
-        </address>
-        <p class="mb-0">&copy; 2025 Paolo Miccoli</p>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container fade-in">
+        <p class="section-label" data-it>Chi sono</p>
+        <p class="section-label" data-en>About me</p>
+        <h2 class="section-title" data-it>15 anni tra fabbrica e codice</h2>
+        <h2 class="section-title" data-en>
+          15 years between factory floor and code
+        </h2>
+        <div class="about-grid">
+          <div class="about-img-wrap">
+            <img src="./images/proPicPM.png" alt="Paolo Miccoli" />
+          </div>
+          <div class="about-text">
+            <p data-it>
+              Sono Paolo, sviluppatore software specializzato in automazione
+              industriale e manifatturiero. Ho iniziato la mia carriera sul
+              campo —
+              <strong
+                >avviando impianti industriali in autonomia in tutto il
+                mondo</strong
+              >
+              come trasfertista per molti anni. Questo mi ha dato qualcosa che
+              la maggior parte dei developer non ha: so come funziona davvero
+              una fabbrica.
+            </p>
+            <p data-en>
+              I'm Paolo, a software developer specialized in industrial
+              automation and manufacturing. I started my career in the field —
+              <strong
+                >commissioning industrial plants autonomously worldwide</strong
+              >
+              as a field engineer for many years. That gave me something most
+              developers don't have: I know how a factory actually works.
+            </p>
+            <p data-it>
+              Nel tempo ho unito questa esperienza sul campo con lo sviluppo
+              software, costruendo sistemi che
+              <strong>coprono l'intera catena tecnologica</strong>: dalla
+              programmazione PLC e SCADA allo sviluppo di applicazioni web cloud
+              con .NET e Angular.
+            </p>
+            <p data-en>
+              Over time I combined that field experience with software
+              development, building systems that
+              <strong>cover the full technology chain</strong>: from PLC and
+              SCADA programming to cloud web application development with .NET
+              and Angular.
+            </p>
+            <p data-it>
+              Lavoro su progetto o pacchetto ore,
+              <strong>senza assunzione full-time</strong>. Disponibile da remoto
+              in tutta Italia e all'estero.
+            </p>
+            <p data-en>
+              I work on a project or hourly-package basis,
+              <strong>without full-time hiring</strong>. Available remotely
+              across Italy and internationally.
+            </p>
+            <div class="about-stats">
+              <div class="stat-box">
+                <span class="stat-num">15+</span>
+                <span class="stat-label" data-it>Anni esperienza</span>
+                <span class="stat-label" data-en>Years experience</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-num">3+</span>
+                <span class="stat-label" data-it>Famiglie PLC</span>
+                <span class="stat-label" data-en>PLC families</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-num">🌍</span>
+                <span class="stat-label" data-it>Worldwide</span>
+                <span class="stat-label" data-en>Worldwide</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container fade-in">
+        <p class="section-label" data-it>Contatti</p>
+        <p class="section-label" data-en>Contact</p>
+        <h2 class="section-title" data-it>Parliamoci</h2>
+        <h2 class="section-title" data-en>Let's talk</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3 data-it>15 minuti gratuiti</h3>
+            <h3 data-en>Free 15-minute call</h3>
+            <p data-it>
+              Descrivi il tuo progetto o il problema che vuoi risolvere. Ti dico
+              subito se posso aiutarti e come.
+            </p>
+            <p data-en>
+              Tell me about your project or the problem you want to solve. I'll
+              let you know right away if and how I can help.
+            </p>
+            <a
+              href="mailto:paolo@pm-softwareautomation.com"
+              class="contact-item"
+            >
+              <i class="fas fa-envelope"></i> paolo@pm-softwareautomation.com
+            </a>
+            <a
+              href="https://linkedin.com/in/paolo-m-5a665884/"
+              class="contact-item"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-linkedin"></i> linkedin.com/in/paolo-m-5a665884
+            </a>
+            <a
+              href="https://github.com/pm83dev/"
+              class="contact-item"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-github"></i> github.com/pm83dev
+            </a>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i> Marano Ticino (NO) —
+              <span data-it>Remoto in tutta Italia e all'estero</span
+              ><span data-en>Remote across Italy and worldwide</span>
+            </div>
+          </div>
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/mjkonddg"
+            method="POST"
+            id="contactForm"
+          >
+            <div class="form-group">
+              <label class="form-label" data-it>Nome</label>
+              <label class="form-label" data-en>Name</label>
+              <input
+                type="text"
+                class="form-control"
+                name="name"
+                required
+                placeholder="Paolo Rossi"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                required
+                placeholder="email@azienda.com"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-it>Telefono (opzionale)</label>
+              <label class="form-label" data-en>Phone (optional)</label>
+              <input
+                type="tel"
+                class="form-control"
+                name="phone"
+                placeholder="+39 333 1234567"
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-it>Messaggio</label>
+              <label class="form-label" data-en>Message</label>
+              <textarea
+                class="form-control"
+                name="message"
+                required
+                data-it-placeholder="Descrivi il tuo progetto o il problema che vuoi risolvere..."
+                data-en-placeholder="Describe your project or the problem you want to solve..."
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn-primary-cta"
+              style="width: 100%; justify-content: center"
+            >
+              <i class="fas fa-paper-plane"></i>
+              <span data-it>Invia messaggio</span>
+              <span data-en>Send message</span>
+            </button>
+            <div class="alert-success" id="formSuccess" data-it>
+              Grazie! Ti rispondo entro 24 ore.
+            </div>
+            <div class="alert-success" id="formSuccessEn" data-en>
+              Thank you! I'll reply within 24 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <span class="footer-logo"
+            >PM SOFTWARE & AUTOMATION — MICCOLI PAOLO</span
+          >
+          <div class="footer-links">
+            <a
+              href="https://linkedin.com/in/paolo-m-5a665884/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://github.com/pm83dev/"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="mailto:paolo@pm-softwareautomation.com" aria-label="Email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+          <span class="footer-copy"
+            >© 2025 Paolo Miccoli — Marano Ticino (NO)</span
+          >
+        </div>
+      </div>
     </footer>
 
-            <!-- Bootstrap JS -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    var form = document.querySelector('form[action^="https://formspree.io"]');
-                    var successMsg = document.getElementById('formSuccess');
-                    if(form) {
-                        form.addEventListener('submit', function(e) {
-                            e.preventDefault();
-                            var data = new FormData(form);
-                            fetch(form.action, {
-                                method: 'POST',
-                                body: data,
-                                headers: {
-                                    'Accept': 'application/json'
-                                }
-                            }).then(function(response) {
-                                if(response.ok) {
-                                    successMsg.classList.remove('d-none');
-                                    form.reset();
-                                    setTimeout(function(){ successMsg.classList.add('d-none'); }, 5000);
-                                }
-                            });
-                        });
-                    }
-                });
-            </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var form = document.getElementById('contactForm');
-                var successMsg = document.getElementById('formSuccess');
-                    var errorMsg = document.getElementById('formError');
-                if(form) {
-                    form.addEventListener('submit', function(e) {
-                        e.preventDefault();
-                        var data = new FormData(form);
-                        fetch(form.action, {
-                            method: 'POST',
-                            body: data,
-                            headers: {
-                                'Accept': 'application/json'
-                            }
-                        }).then(function(response) {
-                            if(response.ok) {
-                                    errorMsg.classList.add('d-none');
-                                    successMsg.classList.remove('d-none');
-                                    form.reset();
-                            } else {
-                                    successMsg.classList.add('d-none');
-                                    errorMsg.classList.remove('d-none');
-                            }
-                        });
-                    });
-                }
-            });
-        </script>
-</body>
+    <script>
+      // ── LANG SWITCH ──
+      const html = document.documentElement;
+      const langBtn = document.getElementById("langBtn");
+      langBtn.addEventListener("click", () => {
+        const isIt = html.getAttribute("data-lang") === "it";
+        html.setAttribute("data-lang", isIt ? "en" : "it");
+        langBtn.textContent = isIt ? "IT" : "EN";
+        // update textarea placeholder
+        updatePlaceholders();
+      });
+      function updatePlaceholders() {
+        const lang = html.getAttribute("data-lang");
+        document.querySelectorAll("[data-it-placeholder]").forEach((el) => {
+          el.placeholder =
+            lang === "it" ? el.dataset.itPlaceholder : el.dataset.enPlaceholder;
+        });
+      }
+      updatePlaceholders();
+
+      // ── MOBILE NAV ──
+      const navToggle = document.getElementById("navToggle");
+      const navLinks = document.getElementById("navLinks");
+      navToggle.addEventListener("click", () =>
+        navLinks.classList.toggle("open"),
+      );
+      navLinks
+        .querySelectorAll("a")
+        .forEach((a) =>
+          a.addEventListener("click", () => navLinks.classList.remove("open")),
+        );
+
+      // ── SCROLL FADE IN ──
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".fade-in")
+        .forEach((el) => observer.observe(el));
+
+      // ── FORM SUBMIT ──
+      const form = document.getElementById("contactForm");
+      const successIt = document.getElementById("formSuccess");
+      const successEn = document.getElementById("formSuccessEn");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        }).then((r) => {
+          if (r.ok) {
+            successIt.style.display = "block";
+            successEn.style.display = "block";
+            form.reset();
+            setTimeout(() => {
+              successIt.style.display = "none";
+              successEn.style.display = "none";
+            }, 6000);
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
